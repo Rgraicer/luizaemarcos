@@ -7,7 +7,7 @@
 <title>Luiza &amp; Marcos · Guia de Viagem</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Pinyon+Script&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
 <style>
 :root{
   --paper:#f7f1e6; --card:#fffaf1; --ink:#3b3340; --muted:#7d7285;
@@ -47,14 +47,15 @@ header::before{content:"";position:absolute;inset:-10px 0 auto 0;height:170px;z-
 .sub::after{content:"✦";display:block;color:var(--gold);margin-top:8px;letter-spacing:.4em;font-size:12px}
 .mono{display:inline-flex;align-items:center;justify-content:center;width:64px;height:64px;border:1.5px solid var(--gold);border-radius:50%;
   font-size:24px;letter-spacing:2px;color:var(--gold);margin-bottom:6px}
-.script{font-family:'Pinyon Script',cursive;font-size:38px;color:var(--gold);line-height:1.1}
+.script{font-weight:500;font-size:36px;letter-spacing:.06em;color:var(--gold);line-height:1.1}
 .sub{color:var(--muted);letter-spacing:.18em;text-transform:uppercase;font-size:13px;margin-top:4px}
 .example{background:var(--warn-bg);border:1px dashed var(--danger);color:var(--danger);border-radius:10px;
   padding:8px 12px;font-size:15px;margin:12px 0;text-align:center}
 .tab{display:none}.tab.active{display:block}
 h2{font-weight:500;font-size:26px;color:var(--gold);margin:18px 0 8px}
 h3{font-weight:600;font-size:19px}
-.day{font-family:'Pinyon Script',cursive;font-size:28px;color:var(--gold);margin:20px 0 6px;border-bottom:1px solid var(--line)}
+.day::first-letter{text-transform:uppercase}
+.day{font-weight:600;font-size:21px;letter-spacing:.04em;color:var(--gold);margin:20px 0 6px;border-bottom:1px solid var(--line)}
 .card{background:var(--card);border:1px solid var(--gold-soft);border-radius:4px 18px 4px 18px;padding:12px 14px;margin:10px 0;box-shadow:var(--shadow)}
 .row{display:flex;justify-content:space-between;gap:10px;align-items:baseline}
 .time{color:var(--gold);font-weight:600;white-space:nowrap}
