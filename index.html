@@ -3,80 +3,64 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<meta name="theme-color" content="#f7f1e6">
+<meta name="theme-color" content="#fcfcfa">
 <title>Luiza &amp; Marcos · Guia de Viagem</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Cormorant+SC:wght@400;500;600;700&display=swap" rel="stylesheet">
 <style>
 :root{
-  --paper:#f7f1e6; --card:#fffaf1; --ink:#3b3340; --muted:#7d7285;
-  --gold:#b08d4f; --gold-soft:#e6d5b0; --rose:#e8b9c0; --lilac:#c9b8e0;
-  --line:#e7dcc6; --danger:#a2433f; --warn-bg:#fbeadf;
-  --shadow:0 2px 14px rgba(120,90,60,.10);
+  --paper:#fcfcfa; --card:#ffffff; --ink:#1b1b1b; --muted:#6b6660;
+  --gold:#b88f4e; --gold-soft:#e6d6b8; --line:#d9d4c8; --danger:#8a3a35; --warn-bg:#faf3ea;
+  --noise:url("data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%22240%22 height=%22240%22%3E%3Cfilter id=%22n%22%3E%3CfeTurbulence type=%22fractalNoise%22 baseFrequency=%22.9%22 numOctaves=%223%22 seed=%224%22/%3E%3CfeColorMatrix values=%220 0 0 0 .55  0 0 0 0 .52  0 0 0 0 .48  0 0 0 .22 0%22/%3E%3C/filter%3E%3Crect width=%22100%25%22 height=%22100%25%22 filter=%22url%28%23n%29%22/%3E%3C/svg%3E"); --diamond:url("data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%2270%22 height=%22104%22 viewBox=%220 0 70 104%22%3E%3Cg fill=%22none%22 stroke=%22%23c49a5a%22 stroke-linecap=%22round%22%3E%3Cpath d=%22M35 4 L66 52 L35 100 L4 52 Z%22 stroke-width=%225%22/%3E%3Cpath d=%22M35 24 L53 52 L35 80 L17 52 Z%22 stroke-width=%223.5%22/%3E%3Cpath d=%22M35 40 L43 52 L35 64 L27 52 Z%22 stroke-width=%222.5%22/%3E%3C/g%3E%3C/svg%3E"); --hyd:url("data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%22150%22 height=%22110%22 viewBox=%220 0 150 110%22%3E%3Cg fill=%22%238fb08a%22 stroke=%22%236d8f69%22 stroke-width=%221%22%3E%3Cpath d=%22M10 100 C20 60 50 50 70 62 C55 70 40 85 10 100Z%22/%3E%3Cpath d=%22M60 98 C70 70 100 60 125 74 C105 80 85 92 60 98Z%22/%3E%3Cpath d=%22M95 60 C105 38 130 34 148 44 C130 50 112 56 95 60Z%22/%3E%3C/g%3E%3Cg%3E%3Ccircle cx=%2235.7%22 cy=%2242.7%22 r=%226.0%22 fill=%22%23a79fc9%22 stroke=%22%237d74a8%22 stroke-width=%22.6%22/%3E%3Ccircle cx=%2243.1%22 cy=%2230.9%22 r=%225.7%22 fill=%22%23b0a8d3%22 stroke=%22%237d74a8%22 stroke-width=%22.6%22/%3E%3Ccircle cx=%2241.5%22 cy=%2241.2%22 r=%225.3%22 fill=%22%238f86b8%22 stroke=%22%237d74a8%22 stroke-width=%22.6%22/%3E%3Ccircle cx=%2255.1%22 cy=%2243.5%22 r=%226.5%22 fill=%22%23a79fc9%22 stroke=%22%237d74a8%22 stroke-width=%22.6%22/%3E%3Ccircle cx=%2261.4%22 cy=%2230.2%22 r=%225.7%22 fill=%22%23a79fc9%22 stroke=%22%237d74a8%22 stroke-width=%22.6%22/%3E%3Ccircle cx=%2224.8%22 cy=%2229.8%22 r=%226.9%22 fill=%22%23a79fc9%22 stroke=%22%237d74a8%22 stroke-width=%22.6%22/%3E%3Ccircle cx=%2231.6%22 cy=%2233.6%22 r=%225.3%22 fill=%22%23b0a8d3%22 stroke=%22%237d74a8%22 stroke-width=%22.6%22/%3E%3Ccircle cx=%2250.9%22 cy=%2243.8%22 r=%226.4%22 fill=%22%238f86b8%22 stroke=%22%237d74a8%22 stroke-width=%22.6%22/%3E%3Ccircle cx=%2257.0%22 cy=%2246.1%22 r=%224.6%22 fill=%22%23a79fc9%22 stroke=%22%237d74a8%22 stroke-width=%22.6%22/%3E%3Ccircle cx=%2234.6%22 cy=%2234.7%22 r=%224.2%22 fill=%22%238f86b8%22 stroke=%22%237d74a8%22 stroke-width=%22.6%22/%3E%3Ccircle cx=%2219.5%22 cy=%2236.4%22 r=%226.3%22 fill=%22%239b92c2%22 stroke=%22%237d74a8%22 stroke-width=%22.6%22/%3E%3Ccircle cx=%2224.0%22 cy=%2228.6%22 r=%224.9%22 fill=%22%238f86b8%22 stroke=%22%237d74a8%22 stroke-width=%22.6%22/%3E%3Ccircle cx=%2235.9%22 cy=%2226.5%22 r=%225.7%22 fill=%22%23b0a8d3%22 stroke=%22%237d74a8%22 stroke-width=%22.6%22/%3E%3Ccircle cx=%2224.3%22 cy=%2236.4%22 r=%225.3%22 fill=%22%23b0a8d3%22 stroke=%22%237d74a8%22 stroke-width=%22.6%22/%3E%3Ccircle cx=%2248.2%22 cy=%2235.2%22 r=%225.3%22 fill=%22%23bdb6d8%22 stroke=%22%237d74a8%22 stroke-width=%22.6%22/%3E%3Ccircle cx=%2251.3%22 cy=%2248.4%22 r=%224.1%22 fill=%22%23a79fc9%22 stroke=%22%237d74a8%22 stroke-width=%22.6%22/%3E%3Ccircle cx=%2241.9%22 cy=%2219.3%22 r=%226.6%22 fill=%22%23bdb6d8%22 stroke=%22%237d74a8%22 stroke-width=%22.6%22/%3E%3Ccircle cx=%2231.5%22 cy=%2246.5%22 r=%225.5%22 fill=%22%239b92c2%22 stroke=%22%237d74a8%22 stroke-width=%22.6%22/%3E%3Ccircle cx=%2246.6%22 cy=%2238.4%22 r=%224.8%22 fill=%22%23a79fc9%22 stroke=%22%237d74a8%22 stroke-width=%22.6%22/%3E%3Ccircle cx=%2262.4%22 cy=%2243.0%22 r=%225.9%22 fill=%22%239b92c2%22 stroke=%22%237d74a8%22 stroke-width=%22.6%22/%3E%3Ccircle cx=%2236.4%22 cy=%2248.9%22 r=%226.0%22 fill=%22%23a79fc9%22 stroke=%22%237d74a8%22 stroke-width=%22.6%22/%3E%3Ccircle cx=%2255.0%22 cy=%2231.4%22 r=%225.8%22 fill=%22%239b92c2%22 stroke=%22%237d74a8%22 stroke-width=%22.6%22/%3E%3Ccircle cx=%2263.8%22 cy=%2243.2%22 r=%224.4%22 fill=%22%238f86b8%22 stroke=%22%237d74a8%22 stroke-width=%22.6%22/%3E%3Ccircle cx=%2217.3%22 cy=%2249.3%22 r=%225.5%22 fill=%22%238f86b8%22 stroke=%22%237d74a8%22 stroke-width=%22.6%22/%3E%3Ccircle cx=%2220.2%22 cy=%2241.1%22 r=%226.7%22 fill=%22%239b92c2%22 stroke=%22%237d74a8%22 stroke-width=%22.6%22/%3E%3Ccircle cx=%2249.1%22 cy=%2227.8%22 r=%225.2%22 fill=%22%23bdb6d8%22 stroke=%22%237d74a8%22 stroke-width=%22.6%22/%3E%3Ccircle cx=%2288.1%22 cy=%2220.1%22 r=%224.7%22 fill=%22%23a79fc9%22 stroke=%22%237d74a8%22 stroke-width=%22.6%22/%3E%3Ccircle cx=%22100.6%22 cy=%2240.7%22 r=%224.7%22 fill=%22%239b92c2%22 stroke=%22%237d74a8%22 stroke-width=%22.6%22/%3E%3Ccircle cx=%22100.2%22 cy=%2224.6%22 r=%224.8%22 fill=%22%238f86b8%22 stroke=%22%237d74a8%22 stroke-width=%22.6%22/%3E%3Ccircle cx=%2280.7%22 cy=%2238.3%22 r=%225.7%22 fill=%22%238f86b8%22 stroke=%22%237d74a8%22 stroke-width=%22.6%22/%3E%3Ccircle cx=%2287.6%22 cy=%2217.4%22 r=%225.9%22 fill=%22%23a79fc9%22 stroke=%22%237d74a8%22 stroke-width=%22.6%22/%3E%3Ccircle cx=%2268.5%22 cy=%2237.8%22 r=%226.9%22 fill=%22%23b0a8d3%22 stroke=%22%237d74a8%22 stroke-width=%22.6%22/%3E%3Ccircle cx=%2281.6%22 cy=%2240.5%22 r=%224.3%22 fill=%22%239b92c2%22 stroke=%22%237d74a8%22 stroke-width=%22.6%22/%3E%3Ccircle cx=%22100.5%22 cy=%2233.8%22 r=%224.6%22 fill=%22%238f86b8%22 stroke=%22%237d74a8%22 stroke-width=%22.6%22/%3E%3Ccircle cx=%22112.0%22 cy=%2243.0%22 r=%224.3%22 fill=%22%23b0a8d3%22 stroke=%22%237d74a8%22 stroke-width=%22.6%22/%3E%3Ccircle cx=%2299.4%22 cy=%2236.8%22 r=%225.1%22 fill=%22%23a79fc9%22 stroke=%22%237d74a8%22 stroke-width=%22.6%22/%3E%3Ccircle cx=%22105.5%22 cy=%2235.9%22 r=%225.1%22 fill=%22%23bdb6d8%22 stroke=%22%237d74a8%22 stroke-width=%22.6%22/%3E%3Ccircle cx=%22116.2%22 cy=%2227.2%22 r=%225.4%22 fill=%22%23a79fc9%22 stroke=%22%237d74a8%22 stroke-width=%22.6%22/%3E%3Ccircle cx=%22112.3%22 cy=%2213.0%22 r=%225.4%22 fill=%22%239b92c2%22 stroke=%22%237d74a8%22 stroke-width=%22.6%22/%3E%3Ccircle cx=%2291.5%22 cy=%2238.8%22 r=%226.2%22 fill=%22%23bdb6d8%22 stroke=%22%237d74a8%22 stroke-width=%22.6%22/%3E%3Ccircle cx=%2271.2%22 cy=%2234.5%22 r=%225.5%22 fill=%22%238f86b8%22 stroke=%22%237d74a8%22 stroke-width=%22.6%22/%3E%3Ccircle cx=%22114.4%22 cy=%2227.1%22 r=%224.4%22 fill=%22%23b0a8d3%22 stroke=%22%237d74a8%22 stroke-width=%22.6%22/%3E%3Ccircle cx=%22116.7%22 cy=%2221.8%22 r=%224.9%22 fill=%22%23a79fc9%22 stroke=%22%237d74a8%22 stroke-width=%22.6%22/%3E%3Ccircle cx=%2290.5%22 cy=%2222.1%22 r=%225.1%22 fill=%22%238f86b8%22 stroke=%22%237d74a8%22 stroke-width=%22.6%22/%3E%3Ccircle cx=%2287.5%22 cy=%2239.5%22 r=%225.6%22 fill=%22%23b0a8d3%22 stroke=%22%237d74a8%22 stroke-width=%22.6%22/%3E%3Ccircle cx=%2289.2%22 cy=%2240.3%22 r=%226.4%22 fill=%22%238f86b8%22 stroke=%22%237d74a8%22 stroke-width=%22.6%22/%3E%3Ccircle cx=%22104.1%22 cy=%2212.5%22 r=%226.2%22 fill=%22%238f86b8%22 stroke=%22%237d74a8%22 stroke-width=%22.6%22/%3E%3Ccircle cx=%22101.1%22 cy=%2246.5%22 r=%226.2%22 fill=%22%23a79fc9%22 stroke=%22%237d74a8%22 stroke-width=%22.6%22/%3E%3Ccircle cx=%2299.7%22 cy=%2217.5%22 r=%224.6%22 fill=%22%23b0a8d3%22 stroke=%22%237d74a8%22 stroke-width=%22.6%22/%3E%3Ccircle cx=%22112.8%22 cy=%2228.1%22 r=%226.8%22 fill=%22%23bdb6d8%22 stroke=%22%237d74a8%22 stroke-width=%22.6%22/%3E%3Ccircle cx=%22110.7%22 cy=%2228.4%22 r=%224.7%22 fill=%22%238f86b8%22 stroke=%22%237d74a8%22 stroke-width=%22.6%22/%3E%3Ccircle cx=%2279.7%22 cy=%2234.3%22 r=%225.4%22 fill=%22%23b0a8d3%22 stroke=%22%237d74a8%22 stroke-width=%22.6%22/%3E%3C/g%3E%3C/svg%3E");
 }
 @media (prefers-color-scheme: dark){
-  :root:not([data-theme="light"]){
-    --paper:#1f1b24; --card:#292430; --ink:#efe6dc; --muted:#a79cb0;
-    --gold:#d3b072; --gold-soft:#4a3f2b; --rose:#a8707b; --lilac:#7f6c9c;
-    --line:#3a3342; --danger:#e08a84; --warn-bg:#3b2a2a; --shadow:none;
-  }
+  :root:not([data-theme="light"]){--paper:#141318;--card:#1c1b22;--ink:#ece7de;--muted:#a8a0a8;--gold:#d3b072;--gold-soft:#4a3f2b;--line:#34323c;--danger:#e39a93;--warn-bg:#2f2323;--noise:none}
 }
-:root[data-theme="dark"]{
-  --paper:#1f1b24; --card:#292430; --ink:#efe6dc; --muted:#a79cb0;
-  --gold:#d3b072; --gold-soft:#4a3f2b; --rose:#a8707b; --lilac:#7f6c9c;
-  --line:#3a3342; --danger:#e08a84; --warn-bg:#3b2a2a; --shadow:none;
-}
+:root[data-theme="dark"]{--paper:#141318;--card:#1c1b22;--ink:#ece7de;--muted:#a8a0a8;--gold:#d3b072;--gold-soft:#4a3f2b;--line:#34323c;--danger:#e39a93;--warn-bg:#2f2323;--noise:none}
 *{box-sizing:border-box;margin:0;padding:0}
 html{-webkit-text-size-adjust:100%;overflow-x:clip}
-body{
-  background:var(--paper); color:var(--ink);
-  font-family:'Cormorant Garamond',Georgia,serif; font-size:18px; line-height:1.4;
-  min-height:100vh; padding-bottom:84px;
-  background-image:
-    radial-gradient(circle at 0% 0%, color-mix(in srgb,var(--rose) 35%,transparent), transparent 40%),
-    radial-gradient(circle at 100% 12%, color-mix(in srgb,var(--lilac) 30%,transparent), transparent 38%);
-  background-repeat:no-repeat; background-attachment:fixed;
-}
+body{background-color:var(--paper);background-image:var(--noise);color:var(--ink);
+  font-family:'Cormorant Garamond',Georgia,serif;font-weight:500;font-size:19px;line-height:1.4;min-height:100vh;padding-bottom:90px}
 .app{max-width:480px;margin:0 auto;padding:0 16px}
-header{text-align:center;padding:28px 0 12px;position:relative}
-header::before{content:"";position:absolute;inset:-10px 0 auto 0;height:170px;z-index:-1;
-  background:radial-gradient(ellipse at 25% 40%,color-mix(in srgb,var(--rose) 55%,transparent),transparent 60%),
-             radial-gradient(ellipse at 75% 55%,color-mix(in srgb,var(--lilac) 50%,transparent),transparent 60%);
-  filter:blur(8px)}
-.sub::after{content:"✦";display:block;color:var(--gold);margin-top:8px;letter-spacing:.4em;font-size:12px}
-.logo{display:block;margin:0 auto 6px;height:88px;width:auto}
-.mono{display:inline-flex;align-items:center;justify-content:center;width:64px;height:64px;border:1.5px solid var(--gold);border-radius:50%;
-  font-size:24px;letter-spacing:2px;color:var(--gold);margin-bottom:6px}
-.script{font-weight:500;font-size:36px;letter-spacing:.06em;color:var(--gold);line-height:1.1}
-.sub{color:var(--muted);letter-spacing:.18em;text-transform:uppercase;font-size:13px;margin-top:4px}
-.example{background:var(--card);border:1px dashed var(--gold);color:var(--muted);border-radius:10px;
-  padding:8px 12px;font-size:15px;margin:12px 0;text-align:center}
-.tab{display:none}.tab.active{display:block}
-h2{font-weight:500;font-size:26px;color:var(--gold);margin:18px 0 8px}
-h3{font-weight:600;font-size:19px}
-.day::first-letter{text-transform:uppercase}
-.day{font-weight:600;font-size:21px;letter-spacing:.04em;color:var(--gold);margin:20px 0 6px;border-bottom:1px solid var(--line)}
-.card{background:var(--card);border:1px solid var(--gold-soft);border-radius:4px 18px 4px 18px;padding:12px 14px;margin:10px 0;box-shadow:var(--shadow)}
-.row{display:flex;justify-content:space-between;gap:10px;align-items:baseline}
-.time{color:var(--gold);font-weight:600;white-space:nowrap}
-.meta{color:var(--muted);font-size:16px}
-.btns{display:flex;flex-wrap:wrap;gap:8px;margin-top:10px}
-.btn{font:inherit;font-size:15px;border:1px solid var(--gold);color:var(--gold);background:transparent;border-radius:999px;
-  padding:6px 12px;text-decoration:none;cursor:pointer;min-height:36px;display:inline-flex;align-items:center}
-.btn.fill{background:var(--gold);color:var(--paper)}
-.btn:focus-visible,nav button:focus-visible{outline:2px solid var(--lilac);outline-offset:2px}
-.warn{background:var(--warn-bg);border-left:4px solid var(--danger);border-radius:10px;padding:12px 14px;margin:12px 0}
-.warn strong{color:var(--danger)}
-ul.info{list-style:none}
-ul.info li{padding:8px 0;border-bottom:1px solid var(--line)}
-ul.info li:last-child{border:0}
-nav{position:fixed;left:0;right:0;bottom:0;background:var(--card);border-top:1px solid var(--line);
-  display:flex;padding-bottom:env(safe-area-inset-bottom);z-index:10}
-nav button{flex:1;font:inherit;font-size:14px;background:none;border:0;color:var(--muted);padding:10px 2px;cursor:pointer;min-height:56px}
-nav button .ic{display:block;font-size:20px;line-height:1.1}
-nav button.active{color:var(--gold);font-weight:600}
+header{text-align:center;padding:0 0 12px}
+header::before{content:"";display:block;height:104px;margin:0 -16px 14px;background:var(--diamond) repeat-x;background-size:70px 104px}
+.logo{display:block;margin:0 auto 6px;height:84px;width:auto}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]) .logo{filter:brightness(1.6)}}
+:root[data-theme="dark"] .logo{filter:brightness(1.6)}
+.script,h2,h3,.day,.time,.sub,.btn,nav button{font-family:'Cormorant SC','Cormorant Garamond',Georgia,serif}
+.script{font-size:34px;font-weight:500;letter-spacing:.14em;line-height:1.1}
+.sub{letter-spacing:.22em;font-size:14px;font-weight:600;margin-top:4px}
+.example{border-top:1px solid var(--line);border-bottom:1px solid var(--line);color:var(--muted);font-style:italic;font-size:16px;text-align:center;padding:8px 12px;margin:12px 0}
 .top-actions{display:flex;gap:8px;justify-content:center;flex-wrap:wrap;margin:8px 0}
+.btn{font-size:15px;font-weight:600;letter-spacing:.1em;border:1px solid var(--ink);color:var(--ink);background:transparent;border-radius:0;
+  padding:6px 12px;text-decoration:none;cursor:pointer;min-height:36px;display:inline-flex;align-items:center}
+.btn.fill{background:var(--ink);color:var(--paper)}
+.btn:focus-visible,nav button:focus-visible{outline:2px solid var(--gold);outline-offset:2px}
+main{position:relative;margin:78px 2px 0;padding:34px 16px 26px;background:var(--card);border:2px solid var(--ink)}
+main::before{content:"";position:absolute;inset:5px;border:1px solid var(--ink);pointer-events:none}
+main::after{content:"";position:absolute;left:-24px;top:-66px;width:170px;height:125px;background:var(--hyd) no-repeat;background-size:contain;pointer-events:none}
+.tab{display:none}.tab.active{display:block}
+h2,.day,h3,.time{text-align:center}
+h2{font-size:34px;font-weight:500;letter-spacing:.1em;margin:4px 0 16px}
+h2.sm{font-size:26px;margin-top:26px}
+.day{font-size:19px;font-weight:600;letter-spacing:.07em;margin:26px 0 8px}
+h3{font-size:23px;font-weight:700;letter-spacing:.08em;margin-top:4px}
+.card{border-bottom:1px solid var(--line);text-align:center;padding:10px 4px 18px}
+.row{display:flex;flex-direction:column;align-items:center;gap:2px}
+.time{font-size:20px;font-weight:600;letter-spacing:.1em;color:var(--gold)}
+.meta{color:var(--muted);font-size:17px}
+.btns{display:flex;flex-wrap:wrap;gap:8px;margin-top:10px;justify-content:center}
+.warn{background:var(--warn-bg);border-top:3px double var(--danger);border-bottom:3px double var(--danger);padding:12px 14px;margin:12px 0;text-align:center}
+.warn strong{color:var(--danger)}
+.tag{display:inline-block;font-family:'Cormorant SC',serif;font-size:13px;letter-spacing:.1em;color:var(--gold);border:1px solid var(--gold);padding:0 8px;margin-top:6px}
+ul.info{list-style:none}
+ul.info li{padding:8px 0;border-bottom:1px solid var(--line);text-align:center}
+ul.info li:last-child{border:0}
+nav{position:fixed;left:0;right:0;bottom:0;background:var(--card);border-top:1px solid var(--ink);display:flex;padding-bottom:env(safe-area-inset-bottom);z-index:10}
+nav button{flex:1;font-size:13px;font-weight:600;letter-spacing:.08em;background:none;border:0;color:var(--muted);padding:10px 2px;cursor:pointer;min-height:56px}
+nav button .ic{display:block;font-size:20px;line-height:1.1;font-family:serif}
+nav button.active{color:var(--gold)}
 </style>
 </head>
 <body>
@@ -105,7 +89,7 @@ nav button.active{color:var(--gold);font-weight:600}
   <button data-tab="roteiro" class="active"><span class="ic">✦</span>Roteiro</button>
   <button data-tab="voos"><span class="ic">✈</span>Voos</button>
   <button data-tab="hoteis"><span class="ic">⌂</span>Hotéis</button>
-  <button data-tab="passeios"><span class="ic">❀</span>Passeios</button>
+  <button data-tab="passeios"><span class="ic">❀</span>Sugestões</button>
   <button data-tab="info"><span class="ic">ⓘ</span>Info</button>
 </nav>
 
@@ -116,7 +100,7 @@ nav button.active{color:var(--gold);font-weight:600}
    forem enviados. Datas/horas são locais, com fuso IANA em `tz`.
    ============================================================ */
 const TRIP = {
-  notice: "Hotéis e sugestões de passeios: em breve.",
+  notice: "Hotéis: em breve · Transfers: a confirmar com a empresa de transporte.",
   title: "Luiza & Marcos — Franschhoek",
   // VOOS REAIS (LATAM, confirmados por e-mail). Sem códigos de reserva/preços de propósito.
   flights: [
@@ -125,18 +109,57 @@ const TRIP = {
     { id:"f2", label:"Volta · Cidade do Cabo → São Paulo", from:"Cidade do Cabo (CPT)", to:"São Paulo (GRU)", code:"LA8061",
       dep:"2026-11-23T15:50", depTz:"Africa/Johannesburg", arr:"2026-11-23T20:00", arrTz:"America/Sao_Paulo" }
   ],
-  hotels: [],      // aguardando dados reais
+  hotels: [],      // aguardando dados reais (Cape Town 16–18/nov e Boschendal/Franschhoek 18–23/nov)
   // Programação oficial (site luizaemarcos.com). `end` é opcional: sem ele, a Agenda recebe 3h de duração.
   activities: [
     { id:"a1", kind:"evento", day:"2026-11-19", title:"Pré-wedding", start:"17:00",
       tz:"Africa/Johannesburg", place:"Rhone Homestead – Boschendal",
       desc:"Dress code: esporte fino. Sugerimos salto grosso ou rasteiras. Levem malhas e pashminas para o anoitecer." },
+    { id:"t1", kind:"transfer", day:"2026-11-16", title:"Transfer 1 · Aeroporto → Hotel", start:"10:55", dur:60,
+      tz:"Africa/Johannesburg", place:"Aeroporto de Cape Town (CPT) → Hotel em Cape Town (a definir)",
+      desc:"Chegada do voo LA8060 às 10:55.\nPassageiros: todos (4 adultos e 2 bebês).\nCadeirinhas para os bebês: a confirmar com a empresa." },
+    { id:"t2", kind:"transfer", day:"2026-11-18", title:"Transfer 2 · Hotel → Boschendal", start:"12:00", dur:120,
+      tz:"Africa/Johannesburg", place:"Hotel em Cape Town (a definir) → Boschendal",
+      desc:"Passageiros: todos (4 adultos e 2 bebês).\nCadeirinhas para os bebês: a confirmar com a empresa." },
     { id:"a2", kind:"evento", day:"2026-11-20", title:"Day off", allDay:true,
       tz:"Africa/Johannesburg", place:"Franschhoek",
       desc:"Dia livre para explorar a região. Sugestões de passeios e restaurantes em breve.\n\nPadrinhos e madrinhas: programação especial com Wine Tram exclusivo para o nosso grupo (passagem por conta dos noivos) e almoço opcional em uma vinícola. Horários em breve." },
     { id:"a3", kind:"evento", day:"2026-11-21", title:"Casamento", start:"14:00",
       tz:"Africa/Johannesburg", place:"Olive Press – Boschendal, Helshoogte Rd, Pniel, África do Sul",
-      desc:"Dress code: social completo. Sugerimos salto grosso e uma pashmina, pois a temperatura tende a cair no fim do dia." }
+      desc:"Dress code: social completo. Sugerimos salto grosso e uma pashmina, pois a temperatura tende a cair no fim do dia." },
+    { id:"t4", kind:"transfer", day:"2026-11-23", title:"Transfer 4 · Boschendal → Aeroporto", start:"05:00", dur:90,
+      tz:"Africa/Johannesburg", place:"Boschendal → Aeroporto de Cape Town (CPT)",
+      desc:"Passageiros: Liian e Joe." },
+    { id:"t3", kind:"transfer", day:"2026-11-23", title:"Transfer 3 · Boschendal → Aeroporto", start:"11:00", dur:90,
+      tz:"Africa/Johannesburg", place:"Boschendal → Aeroporto de Cape Town (CPT)",
+      desc:"Passageiros: Dani e Ricardo (e os 2 bebês).\nCadeirinhas para os bebês: a confirmar com a empresa." }
+  ],
+  // Sugestões gerais (conhecimento geral, NÃO verificadas ao vivo): confirme horários, reservas e preços.
+  suggestions: [
+    { city:"Cape Town", note:"Vocês ficam em Cape Town de 16 a 18/nov; o dia 17 é o mais livre. Confirme horários, reservas e preços antes de ir.",
+      groups:[
+        { title:"Passeios", items:[
+          { name:"Table Mountain (teleférico)", area:"Centro", note:"Vista clássica da cidade. Fecha com vento forte, então confira o clima no dia." },
+          { name:"Cape Point e Cabo da Boa Esperança", area:"Península", note:"Passeio de dia inteiro de carro ou tour, passando por Chapman's Peak se estiver aberta." },
+          { name:"Boulders Beach (pinguins)", area:"Simon's Town", note:"Colônia de pinguins; combina com Cape Point e é tranquilo com crianças." },
+          { name:"V&A Waterfront", area:"Orla do porto", note:"Passeio fácil, com lojas, restaurantes e vista para a Table Mountain; bom para os bebês." },
+          { name:"Kirstenbosch National Botanical Garden", area:"Newlands", note:"Jardim botânico, ótimo para caminhar ou fazer piquenique." },
+          { name:"Bo-Kaap", area:"Centro", note:"Casinhas coloridas e cultura Cape Malay." },
+          { name:"Robben Island", area:"Saída pelo Waterfront", note:"Ilha da prisão de Mandela. Reserve com antecedência; a balsa pode ser cancelada com mau tempo." },
+          { name:"Camps Bay e Signal Hill (pôr do sol)", area:"Atlantic Seaboard", note:"Praia e restaurantes; Signal Hill tem vista para o pôr do sol." }
+        ]},
+        { title:"Restaurantes", items:[
+          { name:"The Pot Luck Club", area:"Woodstock", note:"Pratos para compartilhar, num prédio com vista da cidade. Reserve com antecedência." },
+          { name:"La Colombe", area:"Constantia", note:"Alta gastronomia nos vinhedos. Reserve com muita antecedência." },
+          { name:"Chefs Warehouse at Beau Constantia", area:"Constantia", note:"Pratos para dividir com vista dos vinhedos." },
+          { name:"Harbour House", area:"Kalk Bay", note:"Frutos do mar com vista para o mar; combina com o passeio da península." },
+          { name:"Kalky's", area:"Kalk Bay", note:"Peixe com batata frita, informal e tradicional." },
+          { name:"The Codfather", area:"Camps Bay", note:"Frutos do mar e sushi, escolhidos na hora." },
+          { name:"Biesmiellah", area:"Bo-Kaap", note:"Culinária Cape Malay tradicional." },
+          { name:"Hussar Grill", area:"Vários bairros", note:"Churrascaria sul-africana com carnes." }
+        ]}
+      ]},
+    { city:"Franschhoek e arredores", note:"Sugestões para o Day off (20/nov) em breve.", groups:[] }
   ],
   info: [
     { title:"Pré-wedding · 19/nov · 17h", text:"Esporte fino. Salto grosso ou rasteiras; leve malha ou pashmina para o anoitecer." },
@@ -181,7 +204,7 @@ function allEvents(){
   TRIP.activities.forEach(a=>{
     if(a.allDay) return ev.push({uid:a.id,title:a.title,allDay:true,startDay:a.day,endDay:nextDay(a.day),place:a.place,desc:a.desc||""});
     const st=zonedToUtc(`${a.day}T${a.start}`,a.tz);
-    const en=a.end ? zonedToUtc(`${a.day}T${a.end}`,a.tz) : new Date(st.getTime()+3*3600e3);
+    const en=a.end ? zonedToUtc(`${a.day}T${a.end}`,a.tz) : new Date(st.getTime()+(a.dur||180)*60e3);
     ev.push({uid:a.id,title:a.title,start:st,end:en,place:a.place,desc:a.desc||""});
   });
   return ev;
@@ -222,9 +245,9 @@ $("exampleBanner").hidden = !TRIP.notice;
 (function roteiro(){
   const days = [...new Set(TRIP.activities.map(a=>a.day))].sort();
   $("tab-roteiro").innerHTML = "<h2>Roteiro</h2>" + (days.map(d=>`<div class="day">${esc(fmtDate(d))}</div>`+
-    TRIP.activities.filter(a=>a.day===d).sort((x,y)=>x.start.localeCompare(y.start)).map(a=>`
+    TRIP.activities.filter(a=>a.day===d).sort((x,y)=>(x.start||"").localeCompare(y.start||"")).map(a=>`
     <div class="card"><div class="row"><h3>${esc(a.title)}</h3><span class="time">${a.allDay?"Dia livre":a.start+(a.end?"–"+a.end:"")}</span></div>
-    <div class="meta">${esc(a.place)}</div><p style="white-space:pre-line">${esc(a.desc||"")}</p>${btns(a.id)}</div>`).join("")).join("") || "<p>Sem eventos.</p>");
+    <div class="meta">${esc(a.place)}</div>${a.kind==="transfer"?`<div class="tag">TRANSFER · A CONFIRMAR</div>`:""}<p style="white-space:pre-line">${esc(a.desc||"")}</p>${btns(a.id)}</div>`).join("")).join("") || "<p>Sem eventos.</p>");
 })();
 (function voos(){
   $("tab-voos").innerHTML = "<h2>Voos</h2>"+TRIP.flights.map(f=>`
@@ -234,16 +257,19 @@ $("exampleBanner").hidden = !TRIP.notice;
     <div class="meta">Voo ${esc(f.code)} · horários locais de cada aeroporto</div>${btns(f.id)}</div>`).join("");
 })();
 (function hoteis(){
-  $("tab-hoteis").innerHTML = "<h2>Hotéis</h2>"+(TRIP.hotels.length?"":"<p class=\"meta\">Hospedagem em breve.</p>")+TRIP.hotels.map(h=>`
+  $("tab-hoteis").innerHTML = "<h2>Hotéis</h2>"+(TRIP.hotels.length?"":"<p class=\"meta\" style=\"text-align:center\">Hospedagem em breve: Cape Town (16 a 18/nov) e Boschendal/Franschhoek (18 a 23/nov).</p>")+TRIP.hotels.map(h=>`
     <div class="card"><h3>${esc(h.name)}</h3><div class="meta">${esc(h.address)}</div>
     <p>Check-in ${esc(h.checkIn)} · Check-out ${esc(h.checkOut)}</p><p class="meta">${esc(h.notes||"")}</p>
     <div class="btns"><a class="btn" target="_blank" rel="noopener" href="${esc(gcalUrl(EV[h.id]))}">Adicionar estadia</a>
     <button class="btn" data-ics="${h.id}">.ics</button></div></div>`).join("");
 })();
-(function passeios(){
-  $("tab-passeios").innerHTML = "<h2>Passeios</h2>"+(TRIP.activities.filter(a=>a.kind==="passeio").map(a=>`
-    <div class="card"><h3>${esc(a.title)}</h3><div class="meta">${esc(fmtDate(a.day))} · ${a.start}–${a.end}</div>
-    <p>${esc(a.place)}</p>${btns(a.id)}</div>`).join("")||"<p class=\"meta\">Sugestões de passeios e restaurantes em breve.</p>");
+(function sugestoes(){
+  const map = q => "https://www.google.com/maps/search/?api=1&query="+encodeURIComponent(q);
+  $("tab-passeios").innerHTML = "<h2>Sugestões</h2>"+TRIP.suggestions.map(c=>`
+    <div class="day">${esc(c.city)}</div><p class="meta" style="text-align:center">${esc(c.note||"")}</p>`+
+    c.groups.map(g=>`<h2 class="sm">${esc(g.title)}</h2>`+g.items.map(i=>`
+      <div class="card"><h3>${esc(i.name)}</h3><div class="meta">${esc(i.area)}</div><p>${esc(i.note)}</p>
+      <div class="btns"><a class="btn" target="_blank" rel="noopener" href="${esc(map(i.name+" "+c.city))}">Ver no mapa</a></div></div>`).join("")).join("")).join("");
 })();
 (function info(){
   $("tab-info").innerHTML = "<h2>Informações importantes</h2>"+
