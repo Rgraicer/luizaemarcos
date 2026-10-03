@@ -109,18 +109,19 @@ nav button.active{color:var(--gold);font-weight:600}
 
 <script>
 /* ============================================================
-   TRIP — TODOS OS DADOS ABAIXO SÃO UM EXEMPLO FICTÍCIO (Portugal).
+   TRIP — VOOS = REAIS. Hotéis, activities e info = EXEMPLO FICTÍCIO (Portugal).
    Substituir pelos dados reais (voos, hotéis, passeios) quando
    forem enviados. Datas/horas são locais, com fuso IANA em `tz`.
    ============================================================ */
 const TRIP = {
   isExample: true,
   title: "Luiza & Marcos — Franschhoek",
+  // VOOS REAIS (LATAM, confirmados por e-mail). Sem códigos de reserva/preços de propósito.
   flights: [
-    { id:"f1", label:"EXEMPLO · Ida", from:"São Paulo (GRU)", to:"Lisboa (LIS)", code:"XX 000",
-      dep:"2026-11-19T21:00", depTz:"America/Sao_Paulo", arr:"2026-11-20T10:30", arrTz:"Europe/Lisbon" },
-    { id:"f2", label:"EXEMPLO · Volta", from:"Lisboa (LIS)", to:"São Paulo (GRU)", code:"XX 001",
-      dep:"2026-11-21T13:00", depTz:"Europe/Lisbon", arr:"2026-11-21T19:30", arrTz:"America/Sao_Paulo" }
+    { id:"f1", label:"Ida · São Paulo → Cidade do Cabo", from:"São Paulo (GRU)", to:"Cidade do Cabo (CPT)", code:"LA8060",
+      dep:"2026-11-15T22:45", depTz:"America/Sao_Paulo", arr:"2026-11-16T10:55", arrTz:"Africa/Johannesburg" },
+    { id:"f2", label:"Volta · Cidade do Cabo → São Paulo", from:"Cidade do Cabo (CPT)", to:"São Paulo (GRU)", code:"LA8061",
+      dep:"2026-11-23T15:50", depTz:"Africa/Johannesburg", arr:"2026-11-23T20:00", arrTz:"America/Sao_Paulo" }
   ],
   hotels: [
     { id:"h1", name:"EXEMPLO · Hotel Fictício Lisboa", address:"Rua Exemplo, 123, Lisboa",
@@ -206,7 +207,7 @@ const hm = d => d.toLocaleTimeString("pt-BR",{hour:"2-digit",minute:"2-digit"});
 function fmtLocal(iso,tz){ const d=zonedToUtc(iso,tz);
   return d.toLocaleString("pt-BR",{timeZone:tz,day:"2-digit",month:"short",hour:"2-digit",minute:"2-digit"}); }
 
-$("exampleBanner").textContent = TRIP.isExample ? "⚠ Dados de EXEMPLO (viagem fictícia a Portugal). Os dados reais serão inseridos em breve." : "";
+$("exampleBanner").textContent = TRIP.isExample ? "Voos reais. ⚠ Hotéis, passeios e roteiro ainda são EXEMPLO (fictícios) e serão substituídos em breve." : "";
 $("exampleBanner").hidden = !TRIP.isExample;
 
 (function roteiro(){
