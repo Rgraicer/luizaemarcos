@@ -1,0 +1,255 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#f7f1e6">
+<title>Luiza &amp; Marcos · Guia de Viagem</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Pinyon+Script&display=swap" rel="stylesheet">
+<style>
+:root{
+  --paper:#f7f1e6; --card:#fffaf1; --ink:#3b3340; --muted:#7d7285;
+  --gold:#b08d4f; --gold-soft:#e6d5b0; --rose:#e8b9c0; --lilac:#c9b8e0;
+  --line:#e7dcc6; --danger:#a2433f; --warn-bg:#fbeadf;
+  --shadow:0 2px 14px rgba(120,90,60,.10);
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --paper:#1f1b24; --card:#292430; --ink:#efe6dc; --muted:#a79cb0;
+    --gold:#d3b072; --gold-soft:#4a3f2b; --rose:#a8707b; --lilac:#7f6c9c;
+    --line:#3a3342; --danger:#e08a84; --warn-bg:#3b2a2a; --shadow:none;
+  }
+}
+:root[data-theme="dark"]{
+  --paper:#1f1b24; --card:#292430; --ink:#efe6dc; --muted:#a79cb0;
+  --gold:#d3b072; --gold-soft:#4a3f2b; --rose:#a8707b; --lilac:#7f6c9c;
+  --line:#3a3342; --danger:#e08a84; --warn-bg:#3b2a2a; --shadow:none;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{-webkit-text-size-adjust:100%}
+body{
+  background:var(--paper); color:var(--ink);
+  font-family:'Cormorant Garamond',Georgia,serif; font-size:18px; line-height:1.4;
+  min-height:100vh; padding-bottom:84px;
+  background-image:
+    radial-gradient(circle at 0% 0%, color-mix(in srgb,var(--rose) 35%,transparent), transparent 40%),
+    radial-gradient(circle at 100% 12%, color-mix(in srgb,var(--lilac) 30%,transparent), transparent 38%);
+  background-repeat:no-repeat; background-attachment:fixed;
+}
+.app{max-width:480px;margin:0 auto;padding:0 16px}
+header{text-align:center;padding:28px 0 12px}
+.mono{display:inline-flex;align-items:center;justify-content:center;width:64px;height:64px;border:1.5px solid var(--gold);border-radius:50%;
+  font-size:24px;letter-spacing:2px;color:var(--gold);margin-bottom:6px}
+.script{font-family:'Pinyon Script',cursive;font-size:38px;color:var(--gold);line-height:1.1}
+.sub{color:var(--muted);letter-spacing:.18em;text-transform:uppercase;font-size:13px;margin-top:4px}
+.example{background:var(--warn-bg);border:1px dashed var(--danger);color:var(--danger);border-radius:10px;
+  padding:8px 12px;font-size:15px;margin:12px 0;text-align:center}
+.tab{display:none}.tab.active{display:block}
+h2{font-weight:500;font-size:26px;color:var(--gold);margin:18px 0 8px}
+h3{font-weight:600;font-size:19px}
+.day{font-family:'Pinyon Script',cursive;font-size:28px;color:var(--gold);margin:20px 0 6px;border-bottom:1px solid var(--line)}
+.card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:12px 14px;margin:10px 0;box-shadow:var(--shadow)}
+.row{display:flex;justify-content:space-between;gap:10px;align-items:baseline}
+.time{color:var(--gold);font-weight:600;white-space:nowrap}
+.meta{color:var(--muted);font-size:16px}
+.btns{display:flex;flex-wrap:wrap;gap:8px;margin-top:10px}
+.btn{font:inherit;font-size:15px;border:1px solid var(--gold);color:var(--gold);background:transparent;border-radius:999px;
+  padding:6px 12px;text-decoration:none;cursor:pointer;min-height:36px;display:inline-flex;align-items:center}
+.btn.fill{background:var(--gold);color:var(--paper)}
+.btn:focus-visible,nav button:focus-visible{outline:2px solid var(--lilac);outline-offset:2px}
+.warn{background:var(--warn-bg);border-left:4px solid var(--danger);border-radius:10px;padding:12px 14px;margin:12px 0}
+.warn strong{color:var(--danger)}
+ul.info{list-style:none}
+ul.info li{padding:8px 0;border-bottom:1px solid var(--line)}
+ul.info li:last-child{border:0}
+nav{position:fixed;left:0;right:0;bottom:0;background:var(--card);border-top:1px solid var(--line);
+  display:flex;padding-bottom:env(safe-area-inset-bottom);z-index:10}
+nav button{flex:1;font:inherit;font-size:14px;background:none;border:0;color:var(--muted);padding:10px 2px;cursor:pointer;min-height:56px}
+nav button .ic{display:block;font-size:20px;line-height:1.1}
+nav button.active{color:var(--gold);font-weight:600}
+.top-actions{display:flex;gap:8px;justify-content:center;flex-wrap:wrap;margin:8px 0}
+</style>
+</head>
+<body>
+<div class="app">
+  <header>
+    <div class="mono" aria-hidden="true">L M</div>
+    <div class="script">Luiza &amp; Marcos</div>
+    <div class="sub">Franschhoek · 19–21 nov 2026</div>
+  </header>
+  <div class="example" id="exampleBanner" role="note"></div>
+  <div class="top-actions">
+    <button class="btn fill" id="icsAll">Baixar viagem inteira (.ics)</button>
+    <button class="btn" id="themeBtn" aria-label="Alternar tema claro/escuro">◐ Tema</button>
+  </div>
+
+  <main>
+    <section class="tab active" id="tab-roteiro"></section>
+    <section class="tab" id="tab-voos"></section>
+    <section class="tab" id="tab-hoteis"></section>
+    <section class="tab" id="tab-passeios"></section>
+    <section class="tab" id="tab-info"></section>
+  </main>
+</div>
+
+<nav aria-label="Navegação principal">
+  <button data-tab="roteiro" class="active"><span class="ic">✦</span>Roteiro</button>
+  <button data-tab="voos"><span class="ic">✈</span>Voos</button>
+  <button data-tab="hoteis"><span class="ic">⌂</span>Hotéis</button>
+  <button data-tab="passeios"><span class="ic">❀</span>Passeios</button>
+  <button data-tab="info"><span class="ic">ⓘ</span>Info</button>
+</nav>
+
+<script>
+/* ============================================================
+   TRIP — TODOS OS DADOS ABAIXO SÃO UM EXEMPLO FICTÍCIO (Portugal).
+   Substituir pelos dados reais (voos, hotéis, passeios) quando
+   forem enviados. Datas/horas são locais, com fuso IANA em `tz`.
+   ============================================================ */
+const TRIP = {
+  isExample: true,
+  title: "Luiza & Marcos — Franschhoek",
+  flights: [
+    { id:"f1", label:"EXEMPLO · Ida", from:"São Paulo (GRU)", to:"Lisboa (LIS)", code:"XX 000",
+      dep:"2026-11-19T21:00", depTz:"America/Sao_Paulo", arr:"2026-11-20T10:30", arrTz:"Europe/Lisbon" },
+    { id:"f2", label:"EXEMPLO · Volta", from:"Lisboa (LIS)", to:"São Paulo (GRU)", code:"XX 001",
+      dep:"2026-11-21T13:00", depTz:"Europe/Lisbon", arr:"2026-11-21T19:30", arrTz:"America/Sao_Paulo" }
+  ],
+  hotels: [
+    { id:"h1", name:"EXEMPLO · Hotel Fictício Lisboa", address:"Rua Exemplo, 123, Lisboa",
+      checkIn:"2026-11-20", checkOut:"2026-11-21", notes:"Dado de exemplo — substituir." }
+  ],
+  activities: [
+    { id:"a1", day:"2026-11-20", title:"EXEMPLO · Passeio em Alfama", start:"15:00", end:"17:00",
+      tz:"Europe/Lisbon", place:"Alfama, Lisboa", desc:"Evento de exemplo." },
+    { id:"a2", day:"2026-11-20", title:"EXEMPLO · Jantar", start:"20:00", end:"22:00",
+      tz:"Europe/Lisbon", place:"Restaurante Fictício, Lisboa", desc:"Evento de exemplo." }
+  ],
+  info: [
+    { title:"Documentos", text:"Passaporte válido. (Exemplo — revisar com dados reais.)" },
+    { title:"Moeda", text:"Rand sul-africano (ZAR). (Exemplo — revisar.)" }
+  ],
+  // Aviso real, obrigatório para a África do Sul
+  warnings: [
+    { title:"Certificado Internacional de Vacinação (Febre Amarela)",
+      text:"É obrigatório apresentar o Certificado Internacional de Vacinação ou Profilaxia (CIVP) contra Febre Amarela para entrar na África do Sul, para quem vem do Brasil. Emita o certificado com antecedência e leve a versão impressa junto ao passaporte." }
+  ]
+};
+
+/* ---------- utilidades de fuso / datas ---------- */
+const pad = n => String(n).padStart(2,"0");
+// Converte "YYYY-MM-DDTHH:MM" em um fuso IANA para um instante UTC (Date).
+function zonedToUtc(local, tz){
+  const [d,t] = local.split("T"); const [y,m,da] = d.split("-").map(Number); const [h,mi] = t.split(":").map(Number);
+  const guess = Date.UTC(y,m-1,da,h,mi);
+  const off = tzOffsetMs(guess, tz);
+  let utc = guess - off;
+  const off2 = tzOffsetMs(utc, tz);       // corrige em transições de horário de verão
+  if(off2 !== off) utc = guess - off2;
+  return new Date(utc);
+}
+function tzOffsetMs(utcMs, tz){
+  const p = new Intl.DateTimeFormat("en-US",{timeZone:tz,hourCycle:"h23",year:"numeric",month:"2-digit",day:"2-digit",hour:"2-digit",minute:"2-digit",second:"2-digit"})
+    .formatToParts(new Date(utcMs)).reduce((a,x)=>(a[x.type]=x.value,a),{});
+  return Date.UTC(p.year,p.month-1,p.day,p.hour,p.minute,p.second) - Math.floor(utcMs/1000)*1000;
+}
+const fmtUtc = d => `${d.getUTCFullYear()}${pad(d.getUTCMonth()+1)}${pad(d.getUTCDate())}T${pad(d.getUTCHours())}${pad(d.getUTCMinutes())}00Z`;
+const fmtDay = s => s.replace(/-/g,"");
+const nextDay = s => { const d=new Date(s+"T00:00:00Z"); d.setUTCDate(d.getUTCDate()+1); return d.toISOString().slice(0,10); };
+const fmtDate = s => new Date(s+"T12:00:00Z").toLocaleDateString("pt-BR",{weekday:"long",day:"numeric",month:"long",timeZone:"UTC"});
+const esc = s => String(s).replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
+
+/* ---------- normaliza tudo em "eventos" ---------- */
+function allEvents(){
+  const ev = [];
+  TRIP.flights.forEach(f=>ev.push({uid:f.id,title:`✈ ${f.label}: ${f.from} → ${f.to} (${f.code})`,
+    start:zonedToUtc(f.dep,f.depTz), end:zonedToUtc(f.arr,f.arrTz), place:f.from, desc:`Voo ${f.code}`}));
+  TRIP.hotels.forEach(h=>ev.push({uid:h.id,title:`⌂ ${h.name}`,allDay:true,startDay:h.checkIn,endDay:h.checkOut,place:h.address,desc:h.notes||""}));
+  TRIP.activities.forEach(a=>ev.push({uid:a.id,title:a.title,start:zonedToUtc(`${a.day}T${a.start}`,a.tz),
+    end:zonedToUtc(`${a.day}T${a.end}`,a.tz),place:a.place,desc:a.desc||""}));
+  return ev;
+}
+function gcalUrl(e){
+  const dates = e.allDay ? `${fmtDay(e.startDay)}/${fmtDay(e.endDay)}` : `${fmtUtc(e.start)}/${fmtUtc(e.end)}`;
+  const q = new URLSearchParams({action:"TEMPLATE",text:e.title,dates,details:e.desc||"",location:e.place||""});
+  return "https://calendar.google.com/calendar/render?"+q.toString();
+}
+const icsEsc = s => String(s||"").replace(/\\/g,"\\\\").replace(/;/g,"\\;").replace(/,/g,"\\,").replace(/\n/g,"\\n");
+function vevent(e){
+  const L=["BEGIN:VEVENT",`UID:${e.uid}@luizaemarcos`,`DTSTAMP:${fmtUtc(new Date())}`];
+  if(e.allDay){L.push(`DTSTART;VALUE=DATE:${fmtDay(e.startDay)}`,`DTEND;VALUE=DATE:${fmtDay(e.endDay)}`);}
+  else L.push(`DTSTART:${fmtUtc(e.start)}`,`DTEND:${fmtUtc(e.end)}`);
+  L.push(`SUMMARY:${icsEsc(e.title)}`,`LOCATION:${icsEsc(e.place)}`,`DESCRIPTION:${icsEsc(e.desc)}`,"END:VEVENT");
+  return L.join("\r\n");
+}
+function download(name, events){
+  const body = ["BEGIN:VCALENDAR","VERSION:2.0","PRODID:-//Luiza e Marcos//Guia de Viagem//PT","CALSCALE:GREGORIAN",...events.map(vevent),"END:VCALENDAR"].join("\r\n");
+  const a=document.createElement("a");
+  a.href=URL.createObjectURL(new Blob([body],{type:"text/calendar;charset=utf-8"}));
+  a.download=name; document.body.appendChild(a); a.click(); a.remove();
+}
+const EV = Object.fromEntries(allEvents().map(e=>[e.uid,e]));
+const btns = (id,extra="") => `<div class="btns">
+  <a class="btn" target="_blank" rel="noopener" href="${esc(gcalUrl(EV[id]))}">Google Agenda</a>
+  <button class="btn" data-ics="${id}">.ics</button>${extra}</div>`;
+
+/* ---------- renderização ---------- */
+const $ = id => document.getElementById(id);
+const hm = d => d.toLocaleTimeString("pt-BR",{hour:"2-digit",minute:"2-digit"});
+function fmtLocal(iso,tz){ const d=zonedToUtc(iso,tz);
+  return d.toLocaleString("pt-BR",{timeZone:tz,day:"2-digit",month:"short",hour:"2-digit",minute:"2-digit"}); }
+
+$("exampleBanner").textContent = TRIP.isExample ? "⚠ Dados de EXEMPLO (viagem fictícia a Portugal). Os dados reais serão inseridos em breve." : "";
+$("exampleBanner").hidden = !TRIP.isExample;
+
+(function roteiro(){
+  const days = [...new Set(TRIP.activities.map(a=>a.day))].sort();
+  $("tab-roteiro").innerHTML = "<h2>Roteiro</h2>" + (days.map(d=>`<div class="day">${esc(fmtDate(d))}</div>`+
+    TRIP.activities.filter(a=>a.day===d).sort((x,y)=>x.start.localeCompare(y.start)).map(a=>`
+    <div class="card"><div class="row"><h3>${esc(a.title)}</h3><span class="time">${a.start}–${a.end}</span></div>
+    <div class="meta">${esc(a.place)} · fuso ${esc(a.tz)}</div><p>${esc(a.desc||"")}</p>${btns(a.id)}</div>`).join("")).join("") || "<p>Sem eventos.</p>");
+})();
+(function voos(){
+  $("tab-voos").innerHTML = "<h2>Voos</h2>"+TRIP.flights.map(f=>`
+    <div class="card"><h3>${esc(f.label)}</h3>
+    <div class="row"><span>${esc(f.from)}</span><span class="time">${fmtLocal(f.dep,f.depTz)}</span></div>
+    <div class="row"><span>${esc(f.to)}</span><span class="time">${fmtLocal(f.arr,f.arrTz)}</span></div>
+    <div class="meta">Voo ${esc(f.code)} · horários locais de cada aeroporto</div>${btns(f.id)}</div>`).join("");
+})();
+(function hoteis(){
+  $("tab-hoteis").innerHTML = "<h2>Hotéis</h2>"+TRIP.hotels.map(h=>`
+    <div class="card"><h3>${esc(h.name)}</h3><div class="meta">${esc(h.address)}</div>
+    <p>Check-in ${esc(h.checkIn)} · Check-out ${esc(h.checkOut)}</p><p class="meta">${esc(h.notes||"")}</p>
+    <div class="btns"><a class="btn" target="_blank" rel="noopener" href="${esc(gcalUrl(EV[h.id]))}">Adicionar estadia</a>
+    <button class="btn" data-ics="${h.id}">.ics</button></div></div>`).join("");
+})();
+(function passeios(){
+  $("tab-passeios").innerHTML = "<h2>Passeios</h2>"+TRIP.activities.map(a=>`
+    <div class="card"><h3>${esc(a.title)}</h3><div class="meta">${esc(fmtDate(a.day))} · ${a.start}–${a.end}</div>
+    <p>${esc(a.place)}</p>${btns(a.id)}</div>`).join("");
+})();
+(function info(){
+  $("tab-info").innerHTML = "<h2>Informações importantes</h2>"+
+    TRIP.warnings.map(w=>`<div class="warn" role="alert"><strong>⚠ ${esc(w.title)}</strong><p>${esc(w.text)}</p></div>`).join("")+
+    `<div class="card"><ul class="info">`+TRIP.info.map(i=>`<li><h3>${esc(i.title)}</h3><span class="meta">${esc(i.text)}</span></li>`).join("")+`</ul></div>`;
+})();
+
+/* ---------- interação ---------- */
+document.querySelectorAll("nav button").forEach(b=>b.addEventListener("click",()=>{
+  document.querySelectorAll("nav button,.tab").forEach(x=>x.classList.remove("active"));
+  b.classList.add("active"); $("tab-"+b.dataset.tab).classList.add("active"); scrollTo(0,0);
+}));
+document.addEventListener("click",e=>{
+  const b=e.target.closest("[data-ics]"); if(b) download(b.dataset.ics+".ics",[EV[b.dataset.ics]]);
+});
+$("icsAll").addEventListener("click",()=>download("viagem-luiza-e-marcos.ics",Object.values(EV)));
+$("themeBtn").addEventListener("click",()=>{
+  const r=document.documentElement;
+  const dark = r.dataset.theme ? r.dataset.theme==="dark" : matchMedia("(prefers-color-scheme: dark)").matches;
+  r.dataset.theme = dark ? "light" : "dark";
+});
+</script>
+</body>
+</html>
