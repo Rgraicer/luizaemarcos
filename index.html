@@ -37,12 +37,18 @@ main::after{content:"";position:absolute;left:-24px;top:-66px;width:170px;height
 .tab{display:none}.tab.active{display:block}
 h2,.day,h3,.time{text-align:center}
 h2{font-size:34px;font-weight:500;letter-spacing:.1em;margin:4px 0 16px}
-h2.sm{font-size:26px;margin-top:26px}
-.day{font-size:19px;font-weight:600;letter-spacing:.07em;margin:26px 0 8px}
+h2.sm{font-size:26px;margin:34px 0 16px;padding-bottom:10px;border-bottom:2px solid var(--gold);display:flex;align-items:center;justify-content:center;gap:12px}
+h2.sm::before,h2.sm::after{content:"❖";color:var(--gold);font-size:14px}
+.area{display:inline-block;font-family:'Cormorant SC',serif;font-size:14px;letter-spacing:.12em;font-weight:600;color:var(--gold);margin:2px 0 6px}
+.card p{margin-top:4px}
+.card h3{font-size:21px}
+.day{font-size:18px;font-weight:700;letter-spacing:.08em;margin:38px -4px 14px;padding:9px 6px;background:var(--ink);color:var(--card);position:relative}
+.day:first-of-type{margin-top:8px}
+.day::before,.day::after{content:"◆";color:var(--gold);font-size:11px;margin:0 10px;vertical-align:1px}
 h3{font-size:23px;font-weight:700;letter-spacing:.08em;margin-top:4px}
-.card{border-bottom:1px solid var(--line);text-align:center;padding:10px 4px 18px}
+.card{border:1px solid var(--line);border-top:3px solid var(--gold);background:var(--paper);text-align:center;padding:16px 12px 18px;margin:0 0 16px;box-shadow:0 1px 6px rgba(0,0,0,.05)}
 .row{display:flex;flex-direction:column;align-items:center;gap:2px}
-.time{font-size:20px;font-weight:600;letter-spacing:.1em;color:var(--gold)}
+.time{font-size:18px;font-weight:700;letter-spacing:.1em;color:var(--ink);border:1px solid var(--gold);padding:1px 14px;margin:6px 0 4px;background:var(--card)}
 .meta{color:var(--muted);font-size:17px}
 .btns{display:flex;flex-wrap:wrap;gap:8px;margin-top:10px;justify-content:center}
 .warn{background:var(--warn-bg);border-top:3px double var(--danger);border-bottom:3px double var(--danger);padding:12px 14px;margin:12px 0;text-align:center}
@@ -256,9 +262,9 @@ $("exampleBanner").hidden = !TRIP.notice;
 (function sugestoes(){
   const map = q => "https://www.google.com/maps/search/?api=1&query="+encodeURIComponent(q);
   $("tab-passeios").innerHTML = "<h2>Sugestões</h2>"+TRIP.suggestions.map(c=>`
-    <div class="day">${esc(c.city)}</div><p class="meta" style="text-align:center">${esc(c.note||"")}</p>`+
+    <div class="day">${esc(c.city)}</div><p class="meta" style="text-align:center;margin-bottom:6px">${esc(c.note||"")}</p>`+
     c.groups.map(g=>`<h2 class="sm">${esc(g.title)}</h2>`+g.items.map(i=>`
-      <div class="card"><h3>${esc(i.name)}</h3><div class="meta">${esc(i.area)}</div><p>${esc(i.note)}</p>
+      <div class="card"><h3>${esc(i.name)}</h3><div class="area">${esc(i.area)}</div><p>${esc(i.note)}</p>
       <div class="btns"><a class="btn" target="_blank" rel="noopener" href="${esc(map(i.name+" "+c.city))}">Ver no mapa</a></div></div>`).join("")).join("")).join("");
 })();
 (function info(){
