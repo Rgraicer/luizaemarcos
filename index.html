@@ -133,7 +133,7 @@ const TRIP = {
       desc:"Dress code: esporte fino. Sugerimos salto grosso ou rasteiras. Levem malhas e pashminas para o anoitecer." },
     { id:"a2", kind:"evento", day:"2026-11-20", title:"Day off", allDay:true,
       tz:"Africa/Johannesburg", place:"Franschhoek",
-      desc:"Dia livre para explorar a região. Sugestões de passeios e restaurantes em breve." },
+      desc:"Dia livre para explorar a região. Sugestões de passeios e restaurantes em breve.\n\nPadrinhos e madrinhas: programação especial com Wine Tram exclusivo para o nosso grupo (passagem por conta dos noivos) e almoço opcional em uma vinícola. Horários em breve." },
     { id:"a3", kind:"evento", day:"2026-11-21", title:"Casamento", start:"14:00",
       tz:"Africa/Johannesburg", place:"Olive Press – Boschendal, Helshoogte Rd, Pniel, África do Sul",
       desc:"Dress code: social completo. Sugerimos salto grosso e uma pashmina, pois a temperatura tende a cair no fim do dia." }
@@ -224,7 +224,7 @@ $("exampleBanner").hidden = !TRIP.notice;
   $("tab-roteiro").innerHTML = "<h2>Roteiro</h2>" + (days.map(d=>`<div class="day">${esc(fmtDate(d))}</div>`+
     TRIP.activities.filter(a=>a.day===d).sort((x,y)=>x.start.localeCompare(y.start)).map(a=>`
     <div class="card"><div class="row"><h3>${esc(a.title)}</h3><span class="time">${a.allDay?"Dia livre":a.start+(a.end?"–"+a.end:"")}</span></div>
-    <div class="meta">${esc(a.place)}</div><p>${esc(a.desc||"")}</p>${btns(a.id)}</div>`).join("")).join("") || "<p>Sem eventos.</p>");
+    <div class="meta">${esc(a.place)}</div><p style="white-space:pre-line">${esc(a.desc||"")}</p>${btns(a.id)}</div>`).join("")).join("") || "<p>Sem eventos.</p>");
 })();
 (function voos(){
   $("tab-voos").innerHTML = "<h2>Voos</h2>"+TRIP.flights.map(f=>`
